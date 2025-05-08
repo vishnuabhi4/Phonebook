@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple phone book app built with JavaScript. Add, view, update, delete, and search contacts by name or phone number.">
+<meta name="keywords" content="phone book, contacts, JavaScript, web app, contact manager">
+<meta name="author" content="Your Name">
+<link rel="stylesheet" href="css/style.css">
+    <title>Phone-Book</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Phonebook Application</h1>
+        </header>
+        <!-- Notification on submission -->
+        <div class="notification" id="notification"></div>
+        
+        <!-- Input content side -->
+         <!-- Search contants -->
+        <main class="main-content">
+            <section class="control-panel">
+                <div class="search-section">
+                    <h2>Search Contacts</h2>
+                    <div class="form-group">
+                        <input type="text" class="input-text" id="search-input" placeholder="Search by name or phone number">
+                    </div>
+                    <button id="search-btn">Search</button>
+                    <button id="reset-search-btn">Reset</button>
+                </div>
+                <!-- Add contacts -->
+                <div class="form-section">
+                    <h2>Add/Edit Contact</h2>
+                    <form id="contact-form">
+                        <input type="hidden" id="contact-id"  value="">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="input-text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="input-text" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="input-text" id="email">
+                        </div>
+                        <button type="submit" id="submit-btn">Add Contact</button>
+                        <button type="button" id="cancel-btn" style="display: none;">Cancel</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Display output side -->
+            <section class="contact-display">
+                <h2>Contacts</h2>
+                <div id="contacts-container">
+                    <ul class="contact-list" id="contact-list">
+                        <!-- Contacts will be displayed here -->
+                        <div id="loading">Loading contacts...</div>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
